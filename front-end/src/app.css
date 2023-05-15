@@ -1,0 +1,49 @@
+@tailwind components;
+@tailwind utilities;
+
+table thead tr {
+  background-color: #2065d1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+table thead tr th {
+  color: white !important;
+}
+
+table thead tr th span {
+  color: white !important;
+}
+
+table thead tr th:first-child {
+  border-top-left-radius: 10px;
+}
+
+table thead tr th:last-child {
+  border-top-right-radius: 10px;
+}
+
+table thead tr th span:hover {
+  color: white !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
