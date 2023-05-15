@@ -7,34 +7,34 @@ const getIcon = (name) => <Iconify icon={name} width={22} height={22} />;
 
 const navConfig = [
   {
-    title: 'Dashboard',
+    title: 'Trang chủ',
     path: '/dashboard/app',
-    icon: getIcon('eva:pie-chart-2-fill'),
+    icon: getIcon('material-symbols:team-dashboard'),
   },
   {
-    title: 'Quản lý người dùng',
+    title: 'Chuyên khoa',
     path: '/dashboard/user',
-    icon: getIcon('eva:people-fill'),
+    icon: getIcon('material-symbols:diamond-outline-rounded'),
   },
   {
-    title: 'Quản lý công việc',
+    title: 'Chế độ ăn uống',
     path: '/dashboard/task',
-    icon: getIcon('eva:monitor-fill'),
+    icon: getIcon('mdi:food-apple'),
   },
   {
-    title: 'Quản lý vai trò',
+    title: 'Lịch hẹn',
     path: '/dashboard/role',
-    icon: getIcon('eva:person-fill'),
+    icon: getIcon('material-symbols:auto-schedule-rounded'),
   },
   {
-    title: 'Quản lý loại công việc',
+    title: 'Forum',
     path: '/dashboard/type-task',
-    icon: getIcon('eva:file-text-fill'),
+    icon: getIcon('material-symbols:forum-rounded'),
   },
   {
-    title: 'Thống kê công việc',
+    title: 'Liên kết ngân hàng',
     path: '/dashboard/statistical-task',
-    icon: getIcon('eva:bar-chart-fill'),
+    icon: getIcon('cib:samsung-pay'),
   },
 ];
 

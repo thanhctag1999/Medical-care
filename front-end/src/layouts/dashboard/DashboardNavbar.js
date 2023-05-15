@@ -46,6 +46,7 @@ export default function DashboardNavbar({ onOpenSidebar }) {
       <ToolbarStyle>
         <IconButton onClick={onOpenSidebar} sx={{ mr: 1, color: 'text.primary', display: { lg: 'none' } }}>
           <Iconify icon="eva:menu-2-fill" />
+          Medical Care
         </IconButton>
 
         <Searchbar />

@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 table thead tr {
-  background-color: #2065d1;
+  background-color: #20d19f;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
