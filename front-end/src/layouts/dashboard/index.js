@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, forwardRef } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 // material
 import { styled } from '@mui/material/styles';
-import { Fade, Snackbar } from '@mui/material';
+import { Slide, Snackbar } from '@mui/material';
+import MuiAlert from '@mui/material/Alert';
 //
 import DashboardNavbar from './DashboardNavbar';
 import DashboardSidebar from './DashboardSidebar';
@@ -36,6 +37,7 @@ const MainStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 const currentUser = JSON.parse(localStorage.getItem('user'));
+const Alert = forwardRef((props, ref) => <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />);
 
 export default function DashboardLayout() {
   const [open, setOpen] = useState(false);
@@ -57,15 +59,22 @@ export default function DashboardLayout() {
   const handleCloseNotification = () => {
     dispatch(closeNotification());
   };
+  function TransitionRight(props) {
+    return <Slide {...props} direction="right" />;
+  }
   return (
     <RootStyle>
       <Snackbar
-        TransitionComponent={Fade}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        className="mt-10 cursor-pointer"
+        TransitionComponent={() => TransitionRight}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         open={isOpen}
-        message={message}
         onClick={handleCloseNotification}
-      />
+      >
+        <Alert severity="success" sx={{ width: '100%' }}>
+          {message}
+        </Alert>
+      </Snackbar>
       {token ? (
         <>
           <DashboardNavbar onOpenSidebar={() => setOpen(true)} />

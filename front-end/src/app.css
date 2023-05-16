@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 table thead tr {
-  background-color: #20d19f;
+  background-color: #00ab55;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -40,10 +40,10 @@ table thead tr th span:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #00ab55;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #078043;
 }
