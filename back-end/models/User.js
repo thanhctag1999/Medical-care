@@ -1,3 +1,4 @@
+const { Double } = require("mongodb");
 var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
@@ -14,6 +15,13 @@ var UserSchema = new Schema({
   role: { type: String, default: "User" },
   degree: { type: String },
   link: { type: String },
+  rating: { type: Number },
+  gender: { type: String, default: "Nam" },
+  specialist: { type: String },
+  position: { type: String },
+  experience: { type: Number },
+  description: { type: String },
+  certificate: { type: String },
 });
 
 module.exports = mongoose.model("User", UserSchema);

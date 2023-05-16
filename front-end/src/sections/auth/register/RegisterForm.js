@@ -68,7 +68,7 @@ export default function RegisterForm() {
     <FormikProvider value={formik}>
       <Form autoComplete="off" noValidate onSubmit={handleSubmit}>
         {showError && <p className="text-red-500 mb-4">Email đã được sử dụng!</p>}
-        {showSuccess && <p className="text-green-500 mb-4">Đăng ký tài khoản thành cống!</p>}
+        {showSuccess && <p className="text-green-500 mb-4">Đăng ký tài khoản thành công!</p>}
         <Stack spacing={3}>
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
             <TextField

@@ -59,14 +59,11 @@ export default function DashboardLayout() {
   const handleCloseNotification = () => {
     dispatch(closeNotification());
   };
-  function TransitionRight(props) {
-    return <Slide {...props} direction="right" />;
-  }
   return (
     <RootStyle>
       <Snackbar
         className="mt-10 cursor-pointer"
-        TransitionComponent={() => TransitionRight}
+        TransitionComponent={Slide}
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         open={isOpen}
         onClick={handleCloseNotification}

@@ -1,6 +1,7 @@
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import KeyIcon from '@mui/icons-material/Key';
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import { Box, Container, Tab, Tabs, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
@@ -10,6 +11,8 @@ import Page from '../components/Page';
 import ChangePassword from '../sections/@dashboard/profile/ChangePassword';
 import PatientRecord from '../sections/@dashboard/profile/PatientRecord';
 import ProfileForm from '../sections/@dashboard/profile/ProfileForm';
+import Constant from '../components/Constant';
+import Degree from '../sections/@dashboard/profile/Degree';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,7 +62,11 @@ function Profile(props) {
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
               <Tab icon={<AccountBoxIcon />} iconPosition="start" label="Thông tin" {...a11yProps(0)} />
-              <Tab icon={<MedicalServicesIcon />} iconPosition="start" label="Bệnh án" {...a11yProps(1)} />
+              {user && user.role === Constant.DOCTOR ? (
+                <Tab icon={<MedicalInformationIcon />} iconPosition="start" label="Chứng chỉ" {...a11yProps(1)} />
+              ) : (
+                <Tab icon={<MedicalServicesIcon />} iconPosition="start" label="Bệnh án" {...a11yProps(1)} />
+              )}
               <Tab icon={<ReceiptIcon />} iconPosition="start" label="Thanh toán" {...a11yProps(2)} />
               <Tab icon={<KeyIcon />} iconPosition="start" label="Đổi mật khẩu" {...a11yProps(3)} />
             </Tabs>
@@ -68,7 +75,7 @@ function Profile(props) {
             {user ? <ProfileForm user={user} /> : <p>Loading...</p>}
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <PatientRecord />
+            {user && user.role === Constant.DOCTOR ? <Degree /> : <PatientRecord />}
           </TabPanel>
           <TabPanel value={value} index={2}>
             UpComing
