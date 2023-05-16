@@ -26,6 +26,15 @@ table thead tr th:last-child {
 table thead tr th span:hover {
   color: white !important;
 }
+.doctors-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 60vh;
+}
+.doctors {
+  scroll-snap-align: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
 
 /* width */
 ::-webkit-scrollbar {

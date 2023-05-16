@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "6461bb53004033a8d7f144b3"
+  },
+  "fullName": "super admin",
+  "password": "$2a$10$00RkfCavah1ofqvM9tANkuGW3CZYst5lK4sf/7zndxG3t70CN0iXC",
+  "email": "admin@gmail.com",
+  "createdAt": {
+    "$date": "2023-05-15T04:55:15.330Z"
+  },
+  "isDeleted": false,
+  "role": "Admin",
+  "__v": 0,
+  "avatar": "avatar_12.jpg",
+  "birthday": {
+    "$date": "2000-08-18T17:00:00.000Z"
+  },
+  "degree": "Thạc sĩ",
+  "link": "https://www.facebook.com/",
+  "phoneNumber": "0335134257"
+},{
+  "_id": {
+    "$oid": "64630d23fa53554d8e369d7d"
+  },
+  "fullName": "Mai Huỳnh Hạnh",
+  "password": "$2a$10$v6NGcYsK7E5PFiWT76NFq.nzVD5JZyFJjDNuhhh0zQdypGhgESEJK",
+  "email": "thanhctag1999@gmail.com",
+  "createdAt": {
+    "$date": "2023-05-16T04:54:50.725Z"
+  },
+  "isDeleted": false,
+  "role": "Doctor",
+  "__v": 0,
+  "avatar": "avatar_default.jpg",
+  "birthday": {
+    "$date": "2000-08-17T17:00:00.000Z"
+  },
+  "degree": "Bác sĩ",
+  "phoneNumber": "0335134257",
+  "certificate": "degree1.jpg",
+  "gender": "Nam",
+  "position": "Trưởng khoa",
+  "specialist": "Thần kinh",
+  "link": "",
+  "rating": "3",
+  "description": "When you run this code, you’ll be given a warning that a key should be provided for list items. A “key” is a special string attribute you need to include when creating lists of elements. We’ll discuss why it’s important in the next section."
+},{
+  "_id": {
+    "$oid": "64630dccfa53554d8e369d85"
+  },
+  "fullName": "Phan Hòa Thuận",
+  "password": "$2a$10$7zQA7jnCC/2c6rOWG49OoesAhMHK6MfVFzoWeSqg0UfhE33FkOoJC",
+  "email": "thuan@gmail.com",
+  "createdAt": {
+    "$date": "2023-05-16T04:54:50.725Z"
+  },
+  "isDeleted": false,
+  "role": "User",
+  "__v": 0
+}]
